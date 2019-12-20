@@ -15,8 +15,10 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-config.include Devise::Test::IntegrationHelpers, type: :feature
-config.include FactoryBot::Syntax::Methods
+RSpec.configure do |config|
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryBot::Syntax::Methods
+end
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :puma
 
