@@ -50,6 +50,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'headless'
+  gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'poltergeist'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0.0.beta2'
