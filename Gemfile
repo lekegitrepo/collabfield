@@ -52,6 +52,7 @@ group :test do
   gem 'headless'
   gem 'poltergeist'
   gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
