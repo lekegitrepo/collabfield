@@ -13,6 +13,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+require("posts/modal")
 require("posts/style")
 
 
