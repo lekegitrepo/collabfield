@@ -33,6 +33,8 @@ gem 'faker'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'capybara'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,14 +49,12 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   # gem 'capybara', '>= 2.15'
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'headless'
   gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'poltergeist'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 4.0.0.beta2'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
