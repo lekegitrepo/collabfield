@@ -94,7 +94,7 @@ RSpec.describe PostsHelper, type: :helper do
       helper.stub(:user_signed_in?).and_return(true)
       assign(:post, create(:post, user_id: create(:user, id: 2).id))
       expect(helper.contact_user_partial_path).to(
-        eq 'posts/show/contact_user' 
+        eq 'posts/show/contact_user'
       )
     end
 
@@ -107,7 +107,7 @@ RSpec.describe PostsHelper, type: :helper do
       )
     end
 
-    it "returns an empty partial's path" do
+    it "returns login path" do
       helper.stub(:user_signed_in?).and_return(false)
       expect(helper.contact_user_partial_path).to(
         eq 'posts/show/login_required'
