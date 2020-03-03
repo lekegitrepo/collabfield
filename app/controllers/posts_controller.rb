@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @message_has_been_sent = conversation_exist?
   end
 
   def hobby
@@ -66,5 +67,9 @@ class PostsController < ApplicationController
 
   def get_posts
     PostsForBranchService.new(search: params[:search], category: params[:category], branch: params[:action]).call
+  end
+
+  def conversation_exist?
+    Private::Conversation.between_users(current_user.id, @post.user.id).present?
   end
 end
