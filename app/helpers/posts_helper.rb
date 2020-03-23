@@ -41,7 +41,7 @@ module PostsHelper
 
   def contact_user_partial_path
     if user_signed_in?
-      @posts.user.id != current_user.id ? 'posts/show/contact_user' : 'shared/empty_partial'
+      @post.user.id != current_user.id ? 'posts/show/contact_user' : 'shared/empty_partial'
     else
       'posts/show/login_required'
     end
