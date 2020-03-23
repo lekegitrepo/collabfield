@@ -18,7 +18,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @message_has_been_sent = conversation_exist?
+    # @message_has_been_sent = conversation_exist?
+    if user_signed_in?
+      @message_has_been_sent = conversation_exist?
+    end
   end
 
   def hobby
